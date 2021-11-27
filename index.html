@@ -19,8 +19,12 @@
     </ul>
     <button id="get-order">Get Order</button>
     <script>
-        $('#my-list').sortable()
-        var mySortableList = $('#my-list').sortable('widget');
+        //$('#my-list').sortable()
+        new Sortable(example1, {
+            animation: 150,
+            ghostClass: 'blue-background-class'
+        });
+        //var mySortableList = $('#my-list').sortable('widget');
         $('#get-order').click(function(){
             var order = $('#my-list').sortable('toArray');
             alert(order);
