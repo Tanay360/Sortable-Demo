@@ -7,7 +7,6 @@
     <title>Document</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery-sortablejs@latest/jquery-sortable.js"></script>
     <style>
         ul{
             list-style-type: none;
@@ -39,15 +38,17 @@
     </ul>
     <button id="get-order">Get Order</button>
     <script>
-        //$('#my-list').sortable()
         new Sortable(document.getElementById('my-list'), {
             animation: 150,
             ghostClass: 'blue-background-class'
         });
-        //var mySortableList = $('#my-list').sortable('widget');
         $('#get-order').click(function(){
-            var order = $('#my-list').sortable('toArray');
-            alert(order);
+            const items = document.querySelectorAll('li');
+            const inTexts = [];
+            for(var i = 1;i<items.length;i++){
+                inTexts.push($(items[0]).text());
+            }
+            alert(inTexts);
         })
     </script>
 </body>
