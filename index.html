@@ -19,10 +19,7 @@
     </ul>
     <button id="get-order">Get Order</button>
     <script>
-        $('#my-list').sortable({
-            handle: '.handle',
-            invertSwap: true,
-        })
+        $('#my-list').sortable()
         var mySortableList = $('#my-list').sortable('widget');
         $('#get-order').click(function(){
             var order = $('#my-list').sortable('toArray');
