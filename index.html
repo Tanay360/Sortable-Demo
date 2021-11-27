@@ -46,7 +46,7 @@
             const items = document.querySelectorAll('li');
             const inTexts = [];
             for(var i = 1;i<items.length;i++){
-                inTexts.push($(items[0]).text());
+                inTexts.push($(items[i]).text());
             }
             alert(inTexts);
         })
