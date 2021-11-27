@@ -45,7 +45,7 @@
         $('#get-order').click(function(){
             const items = document.querySelectorAll('li');
             const inTexts = [];
-            for(var i = 1;i<items.length;i++){
+            for(var i = 0;i<items.length;i++){
                 inTexts.push($(items[i]).text());
             }
             alert(inTexts);
